@@ -1,3 +1,19 @@
+= Fismine
+
+Ruby 1.9.3
+Rails 2.3.14
+
+Project management for editorial (content) scope. 
+
+add front end
+
+extend membership management
+
+Mass mailing for periodical newsletter
+
+
+Base on (start as your own from): 
+
 = Redmine
 
 Redmine is a flexible project management web application written using Ruby on Rails framework.
