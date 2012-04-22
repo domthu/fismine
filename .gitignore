@@ -29,3 +29,5 @@
 /Gemfile.lock
 /Gemfile.local
 
+.rvmrc
+
