@@ -31,3 +31,13 @@
 
 .rvmrc
 
+/Gemfile
+/config/environment.rb
+/files/delete.me
+/log/delete.me
+/tmp/test/empty
+
+config/environment.rb
+files/delete.me
+log/delete.me
+tmp/test/empty

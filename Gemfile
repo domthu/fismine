@@ -17,25 +17,25 @@ group :openid do
 end
 
 # Optional gem for exporting the gantt to a PNG file, not supported with jruby
-platforms :mri, :mingw do
-  group :rmagick do
-    # RMagick 2 supports ruby 1.9
-    # RMagick 1 would be fine for ruby 1.8 but Bundler does not support
-    # different requirements for the same gem on different platforms
-    gem "rmagick", ">= 2.0.0"
-  end
-end
+#platforms :mri, :mingw do
+#  group :rmagick do
+#    # RMagick 2 supports ruby 1.9
+#    # RMagick 1 would be fine for ruby 1.8 but Bundler does not support
+#    # different requirements for the same gem on different platforms
+#    gem "rmagick", ">= 2.0.0"
+#  end
+#end
 
 # Database gems
-platforms :mri, :mingw do
-  group :postgresql do
-    gem "pg", ">= 0.11.0"
-  end
+#platforms :mri, :mingw do
+#  group :postgresql do
+#    gem "pg", ">= 0.11.0"
+#  end
 
-  group :sqlite do
-    gem "sqlite3"
-  end
-end
+#  group :sqlite do
+#    gem "sqlite3"
+#  end
+#end
 
 platforms :mri_18, :mingw_18 do
   group :mysql do
@@ -43,37 +43,37 @@ platforms :mri_18, :mingw_18 do
   end
 end
 
-platforms :mri_19, :mingw_19 do
-  group :mysql do
-    gem "mysql2", "~> 0.2.7"
-  end
-end
+#platforms :mri_19, :mingw_19 do
+#  group :mysql do
+#    gem "mysql2", "~> 0.2.7"
+#  end
+#end
 
-platforms :jruby do
-  gem "jruby-openssl"
+#platforms :jruby do
+#  gem "jruby-openssl"
+#
+#  group :mysql do
+#    gem "activerecord-jdbcmysql-adapter"
+#  end
+#
+#  group :postgresql do
+#    gem "activerecord-jdbcpostgresql-adapter"
+#  end
 
-  group :mysql do
-    gem "activerecord-jdbcmysql-adapter"
-  end
+#  group :sqlite do
+#    gem "activerecord-jdbcsqlite3-adapter"
+#  end
+#end
 
-  group :postgresql do
-    gem "activerecord-jdbcpostgresql-adapter"
-  end
+#group :development do
+#  gem "rdoc", ">= 2.4.2"
+#end
 
-  group :sqlite do
-    gem "activerecord-jdbcsqlite3-adapter"
-  end
-end
-
-group :development do
-  gem "rdoc", ">= 2.4.2"
-end
-
-group :test do
-  gem "shoulda", "~> 2.10.3"
-  gem "edavis10-object_daddy", :require => "object_daddy"
-  gem "mocha"
-end
+#group :test do
+#  gem "shoulda", "~> 2.10.3"
+#  gem "edavis10-object_daddy", :require => "object_daddy"
+#  gem "mocha"
+#end
 
 local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
 if File.exists?(local_gemfile)
